@@ -92,7 +92,7 @@ namespace Lab7.Controllers
            
             Sach food = db.Sachs.FirstOrDefault(x => x.id == id);
             if (food == null) return false;
-            db.Sachs.DeleteOnSubmit(food);
+            db.Sachs.DeleteOnSubmit(sach);
             db.SubmitChanges();
             return true;
         }
